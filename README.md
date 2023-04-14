@@ -3,10 +3,10 @@
 
 To test this project is required to install:
 
-[Apache Maven](https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip)
-[Windows Openssl](https://slproweb.com/download/Win64OpenSSL_Light-3_1_0.exe)
-[Java JDK 11](https://www.oracle.com/es/java/technologies/javase/jdk11-archive-downloads.html#license-lightbox)
-[Visual Studio Code](https://code.visualstudio.com/download)
+1. [Apache Maven](https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip)
+2. [Windows Openssl](https://slproweb.com/download/Win64OpenSSL_Light-3_1_0.exe)
+3. [Java JDK 11](https://www.oracle.com/es/java/technologies/javase/jdk11-archive-downloads.html#license-lightbox)
+4. [Visual Studio Code](https://code.visualstudio.com/download)
 
 ## Configuration:
 
