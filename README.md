@@ -58,3 +58,7 @@ Visual Studio Code detects automatically the type of the project, you only have 
 The project is configured to create certificates and keys in c:\Certificados folder and configure the SSL/TLS connections in IRIS. When the configuration is finished a connection is opened with IRIS and a SQL query is executed. 
 
 ![Terminal Result](images/TerminalResult.JPG)
+
+The final result can be reviewed executing a select query from SQL Explorer, if you can see a record in the table, CONGRATULATIONS! you have configured your first java project connected by JDBC to IRIS by SSL/TLS.
+
+![Query Result](images/SQLExplorer.JPG)
