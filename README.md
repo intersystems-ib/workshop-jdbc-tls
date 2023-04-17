@@ -53,7 +53,7 @@ The last step to be checked is the configuration of the %SuperServer port to acc
 
 Visual Studio Code detects automatically the type of the project, you only have to open **RUN** menu and click on **Run Without Debug**. 
 
-![Visual Studio Code Menu](images/RunningJava.jpg)
+![Visual Studio Code Run Menu](images/RunMenu.jpg)
 
 The project is configured to create certificates and keys in c:\Certificados folder and configure the SSL/TLS connections in IRIS. When the configuration is finished a connection is opened with IRIS and a SQL query is executed. 
 
