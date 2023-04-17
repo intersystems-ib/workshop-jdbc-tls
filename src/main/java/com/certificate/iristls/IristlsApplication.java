@@ -63,8 +63,9 @@ public class IristlsApplication implements CommandLineRunner{
 			// Execution de IRIS commands to create %SuperServer TLS/SSL configuration and enable TLS/SSL comunication for SuperServer
 			boolean superServerConfigLoaded = irisInstance.classMethodBoolean("%SYSTEM.OBJ", "Load", absolutePath+"\\Configuration.xml","ck","","1");
 			boolean sslSuperServerUpdated = irisInstance.classMethodBoolean("User.Configuration", "UpdateSSLSuperServer");
+			boolean testTableReady = irisInstance.classMethodBoolean("User.Configuration", "SetupTestTable");
 			
-			if (superServerConfigLoaded && sslSuperServerUpdated)
+			if (superServerConfigLoaded && sslSuperServerUpdated && testTableReady)
 			{
 				// Example of insert in specific table and namespace, to reproduce the example is required to configure an existing namespace and table
 				IRISDataSource ds = new IRISDataSource();
