@@ -21,7 +21,7 @@ This code is a Java project based on MAVEN so we just need to execute `mvn clean
 
 Finally, we have to configure two environment variables in the system:
 1. JAVA_HOME: path to java JDK installation (bin folder excluded).
-2. OPENSSL_HOME: path to OpenSSL installation (bin folded included).
+2. OPENSSL_HOME: path to OpenSSL installation (bin folder included).
 
 ### application.properties
 
