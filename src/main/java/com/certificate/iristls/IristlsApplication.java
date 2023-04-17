@@ -52,7 +52,8 @@ public class IristlsApplication implements CommandLineRunner{
 			p = Runtime.getRuntime().exec("\""+javaHome+"\\bin\\keytool\" -importcert -file C:\\Certificados\\cert.pem -keystore C:\\Certificados\\truststore.jks -storepass InterSystems -noprompt -trustcacerts");
 			p.waitFor();
 			
-			File folder = new File("src/main/resources");
+			//File folder = new File("src/main/resources");
+			File folder = new File("src");
 			String absolutePath = folder.getAbsolutePath();
 			
 			// IRIS CONNECTION
@@ -61,7 +62,7 @@ public class IristlsApplication implements CommandLineRunner{
 			IRIS irisInstance = IRIS.createIRIS(irisConnection);
 
 			// Execution de IRIS commands to create %SuperServer TLS/SSL configuration and enable TLS/SSL comunication for SuperServer
-			boolean superServerConfigLoaded = irisInstance.classMethodBoolean("%SYSTEM.OBJ", "Load", absolutePath+"\\Configuration.xml","ck","","1");
+			boolean superServerConfigLoaded = irisInstance.classMethodBoolean("%SYSTEM.OBJ", "Load", absolutePath+"\\User\\Configuration.cls","ck","","1");
 			boolean sslSuperServerUpdated = irisInstance.classMethodBoolean("User.Configuration", "UpdateSSLSuperServer");
 			boolean testTableReady = irisInstance.classMethodBoolean("User.Configuration", "SetupTestTable");
 			

@@ -23,13 +23,16 @@ ClassMethod UpdateSSLSuperServer() As %Boolean [ Language = objectscript ]
  return 1
 }
 
-ClassMethod SetupTestTable() As %Boolean [ Language = objectscript ]
+ClassMethod SetupTestTable(pNS As %String = "USER") As %Boolean [ Language = objectscript ]
 {
+	#dim oldNS as %String = $namespace
+
+	set $namespace = pNS
 	if '##class(%Dictionary.CompiledClass).%ExistsId("Phonebook.Company")
 	{
-		&SQL(CREATE TABLE Phonebook.Company (Code VARCHAR, Name VARCHAR, Address VARCHAR))
+		&SQL(CREATE TABLE Phonebook.Company (Code VARCHAR(50), Name VARCHAR(50), Address VARCHAR(50)))
 	}
-	
+	set $namespace = oldNS
 	return 1
 }
 
