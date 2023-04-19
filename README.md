@@ -11,10 +11,14 @@ To test this project is required to install:
 ## Configuration:
 
 InterSystems jdbc library is not uploaded into Maven Repository so we have to install it into our local Maven repository. To do it we have to create c:\Certificados folder and copy **intersystems-jdbc-3.6.1.jar** into it. The next step is to execute the following command:
-
-```bash
-mvn install:install-file -Dfile=c:\\Certificados\\intersystems-jdbc-3.6.1.jar -DgroupId=com.intersystems -DartifactId=intersystems-jdbc -Dversion=3.6.1 -Dpackaging=jar
-```
+- From CMD shell: 
+  ```bash
+  mvn install:install-file -Dfile=c:\\Certificados\\intersystems-jdbc-3.6.1.jar -DgroupId=com.intersystems -DartifactId=intersystems-jdbc -Dversion=3.6.1 -Dpackaging=jar
+  ```
+- or from PowerShell:
+  ```bash
+  mvn install:install-file -D file=c:/Certificados/intersystems-jdbc-3.6.1.jar -D groupId=com.intersystems -D artifactId=intersystems-jdbc -D version=3.6.1 -D packaging=jar
+  ```
 Please, confirm that a new folder has been created in the local repository (similar to `C:\Users\username\.m2\repository\com\intersystems\intersystems-jdbc\3.6.1`)
 
 This code is a Java project based on MAVEN so we just need to execute `mvn clean install` to confirm that we have installed all the dependencies of the project.
