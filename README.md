@@ -1,4 +1,7 @@
 # JAVA JDBC and SSL/TLS connections
+
+> **DISCLAIMER:** This code is published as it is and it's not supported by InterSystems. The example and documentation included in this repository are published only for demonstration purposes and shouldn't be intended as production code. Use this code under your own responsibility and risk. 
+
 ## Prerequisites:
 
 To test this project is required to install:
